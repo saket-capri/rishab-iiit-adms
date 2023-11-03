@@ -1,1 +1,1 @@
-# rishab-iiit-adms
+# rishabh-iiit-adms
