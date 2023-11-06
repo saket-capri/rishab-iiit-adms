@@ -7,12 +7,14 @@ from db import Base, engine
 class StudentInfo(Base):
     __tablename__ = "student_table"
 
-    student_roll_no = Column(Integer, primary_key=True, index=True)
+    id = Column(Integer, primary_key=True, index = True)
+    student_roll_no = Column(Integer, unique=True)
     first_name = Column(String, nullable=False)
-    lastname= Column(String)
+    last_name= Column(String)
     email = Column(String, nullable=False)
     phone = Column(String)
     semester = Column(Integer, nullable=False)
     # Base.metadata.create_all(bind=engine)
+    # method creates the corresponding tables in the database.
 
 
