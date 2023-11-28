@@ -1,8 +1,8 @@
 from sqlalchemy.schema import Column
 from sqlalchemy.types import String, Integer
-from db import Base, engine
+from database.db import Base, engine
 # from database.config import MySQLdb
-class StudentInfo(Base):
+class SubjectInfo(Base):
     __tablename__ = "subject_table"
 
     subject_id = Column(Integer, primary_key=True, index=True)

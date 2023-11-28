@@ -1,10 +1,9 @@
-import mysql.connector
-db_connection = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  passwd=""
-)
-# print(db_connection)
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
-import pymysql
-pymysql.install_as_MySQLdb()
+class Settings(BaseSettings):
+    # api_key: str = "saket"
+    DB_HOST: str
+
+    model_config = SettingsConfigDict(env_file=".env") 
+
+settings = Settings()

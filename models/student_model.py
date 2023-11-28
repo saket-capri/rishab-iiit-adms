@@ -2,7 +2,7 @@
 
 from sqlalchemy.schema import Column
 from sqlalchemy.types import String, Integer
-from db import Base, engine
+from database.db import Base, engine
 # from database.config import MySQLdb
 class StudentInfo(Base):
     __tablename__ = "student_table"
